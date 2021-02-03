@@ -54,6 +54,8 @@ void addMiddle(int value, int pos){
     }
     if(temp != NULL){
         newElem->next = temp->next;
+        newElem->prev = temp;
+        temp->next->prev = newElem;
         temp->next = newElem;
     }
 
